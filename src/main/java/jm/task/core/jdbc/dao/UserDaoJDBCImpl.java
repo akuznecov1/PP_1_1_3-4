@@ -11,12 +11,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoJDBCImpl implements UserDao {
-    private static final String creationString = "create table if not exists user(id INTEGER NOT NULL AUTO_INCREMENT, " +
-            "name char(30) not null, lastName char(30) not null, age smallint not null, primary key (id))";
-    private static final String droppingString = "drop table IF EXISTS user";
-    private static final String savingString = "INSERT INTO user (name,lastName,age) values(?,?,?)";
+    private static final String creationString = "CREATE TABLE IF NOT EXISTS user(id INTEGER NOT NULL AUTO_INCREMENT, " +
+            "name CHAR(30) NOT NULL, lastName CHAR(30) NOT NULL, age SMALLINT NOT NULL, PRIMARY KEY (id))";
+    private static final String droppingString = "DROP TABLE IF EXISTS user";
+    private static final String savingString = "INSERT INTO user (name,lastName,age) VALUES (?,?,?)";
     private static final String deletingString = "DELETE FROM user WHERE id = ?";
-    private static final String selectingString = "select * from user";
+    private static final String selectingString = "SELECT * FROM user";
     private static final String truncatingString = "TRUNCATE TABLE user";
 
     public UserDaoJDBCImpl() {

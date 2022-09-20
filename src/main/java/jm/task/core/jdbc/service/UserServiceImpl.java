@@ -4,7 +4,7 @@ import jm.task.core.jdbc.model.User;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
-    public static UserDaoJDBCImpl userDaoJDBC = new UserDaoJDBCImpl();
+    private static final UserDaoJDBCImpl userDaoJDBC = new UserDaoJDBCImpl();
 
     public void createUsersTable() {
         userDaoJDBC.createUsersTable();
